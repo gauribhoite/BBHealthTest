@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.gauri_rb.myapplication"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
+    androidTestCompile 'com.android.support:appcompat-v7:23.1.0'
+    androidTestCompile 'info.cukes:cucumber-android:1.2.4@jar'
+    androidTestCompile 'info.cukes:cucumber-java8:1.2.4'
+    androidTestCompile 'info.cukes:cucumber-jvm-deps:1.0.5'
+    androidTestCompile 'info.cukes:cucumber-junit:1.2.4'
+    androidTestCompile 'info.cukes:gherkin:2.12.2'
+    androidTestCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:design:23.1.0'
+    androidTestCompile 'info.cukes:cucumber-picocontainer:1.2.4'
+    androidTestCompile 'info.cukes:cucumber-java:1.2.4'
+}
